@@ -1,0 +1,60 @@
+package terstruktur1;
+
+public class Mahasiswa {
+    private String nim, nama;
+    private Float uts, uas;
+    private String grade;
+    private Double nilaiAkhir;
+
+    public String getNim() {
+        return nim;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public Float getUts() {
+        return uts;
+    }
+
+    public void setUts(Float uts) {
+        this.uts = uts;
+    }
+
+    public Float getUas() {
+        return uas;
+    }
+
+    public void setUas(Float uas) {
+        this.uas = uas;
+    }
+
+    public Double getNilaiAkhir() {
+        nilaiAkhir = (uts + uas) / 2.0;
+        return nilaiAkhir;
+    }
+
+    public String getGrade() {
+        double na = getNilaiAkhir();
+        if (na < 50)
+            grade = "E";
+        else if (na < 60)
+            grade = "D";
+        else if (na < 70)
+            grade = "C";
+        else if (na < 80)
+            grade = "B";
+        else
+            grade = "A";
+        return grade;
+    }
+}
